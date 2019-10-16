@@ -1,0 +1,60 @@
+@import "./settings";
+
+body {
+  background-color: $color-primary;
+  font: $font-primary;
+  color: $color-text;
+}
+
+
+form {
+  display: table;
+
+  label {
+    display: table-row;
+
+    strong,
+    input {
+      display: table-cell;
+    }
+  }
+}
+
+a {
+  color: $color-link;
+  text-decoration: underline;
+
+  &:hover {
+    opacity: 0.8
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  &.icon {
+    text-decoration: none;
+    opacity: 0.8;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.icon {
+  text-decoration: none;
+  display: inline-block;
+  margin: 0.2rem;
+}
+
+.pagination {
+  ul {
+    list-style: none;
+  }
+
+  li {
+    display: inline-block;
+    margin: 0.2rem;
+  }
+}

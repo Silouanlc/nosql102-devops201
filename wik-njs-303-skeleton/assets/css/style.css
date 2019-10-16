@@ -1,0 +1,55 @@
+body {
+  background-color: #0b1d32;
+  font: 1em Roboto, "Lucida grande", Arial, sans-serif;
+  color: #ffffff;
+}
+
+form {
+  display: table;
+}
+
+form label {
+  display: table-row;
+}
+
+form label strong,
+form label input {
+  display: table-cell;
+}
+
+a {
+  color: #fad500;
+  text-decoration: underline;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+a:active {
+  opacity: 0.6;
+}
+
+a.icon {
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+a.icon:hover {
+  opacity: 1;
+}
+
+.icon {
+  text-decoration: none;
+  display: inline-block;
+  margin: 0.2rem;
+}
+
+.pagination ul {
+  list-style: none;
+}
+
+.pagination li {
+  display: inline-block;
+  margin: 0.2rem;
+}

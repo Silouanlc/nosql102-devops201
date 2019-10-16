@@ -1,0 +1,34 @@
+extends ../layout
+
+block content
+  p Voici la liste des utilisateurs :
+
+  a(href='/users/add') Ajouter un utilisateur
+  table(border=1)
+    thead
+      tr
+        th Id
+        th Pseudo
+        th Prénom
+        th Nom
+        th Email
+        th Action
+
+    tbody
+      each user in users
+        tr
+          td #{user.rowid}
+          td #{user.pseudo}
+          td #{user.firstname}
+          td #{user.lastname}
+          td #{user.email}
+          td
+            a.icon(href='/users/' + user.rowid) 🔍
+            a.icon(href='/users/' + user.rowid + '/edit') 📝
+            a.icon(href='/users/' + user.rowid + '?_method=delete') 🗑
+  nav.pagination
+    ul
+      li Pages :
+      each v, i in new Array(Math.ceil(count / 10))
+        li
+          a(href=('/users?limit=10&offset=' + i*10))= i
